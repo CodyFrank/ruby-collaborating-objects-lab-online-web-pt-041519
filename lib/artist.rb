@@ -1,3 +1,4 @@
+require "pry"
 class Artist
   attr_accessor :name, :songs
 
@@ -18,5 +19,9 @@ class Artist
 
   def save
     @@all << self
+  end
+
+  def self.find_or_create_by_name(name)
+    binding.pry
   end
 end
